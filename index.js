@@ -7,7 +7,7 @@ var Letter = require("./letter.js");
 var prompt = require("prompt");
 
 prompt.start();
-
+console.log("This is a hangman game. Please guess type your letter. Good Lucks!");
 
 var game = function () {
     this.wordList = ["Waylon", "Dalton", "Justine", "Henderson", "Abdullah", "Marcus", "Cruz", "Randolph"];
@@ -21,6 +21,7 @@ var game = function () {
         var chosenWord = this.wordList[Math.floor(Math.random() * this.wordList.length)];
         this.currentWrd = new Word(chosenWord);
         this.askUser();
+        console.log(this.currentWrd.wordShow());
     }
 
     this.askUser = function () {
